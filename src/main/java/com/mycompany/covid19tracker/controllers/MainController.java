@@ -44,7 +44,7 @@ public class MainController implements Initializable {
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {  
+    public void initialize(URL url, ResourceBundle rb) {
         labelLastRefresh.setAlignment(Pos.CENTER);
         labelTotalCase.setAlignment(Pos.CENTER);
         labelTotalRecovered.setAlignment(Pos.CENTER);

@@ -5,7 +5,6 @@
  */
 package com.mycompany.covid19tracker.daos;
 
-import com.mycompany.covid19tracker.Tools;
 import com.mycompany.covid19tracker.http.Request;
 import java.util.HashMap;
 import java.util.logging.Level;
@@ -50,27 +49,21 @@ public class DataDAO {
             JSONObject jsono = (JSONObject) jsonP.parse(jsonStr);
             
             totalCase = ((JSONObject) (JSONObject) jsono.get("Global")).get("TotalConfirmed").toString();
-            Tools.insertNumberComma(totalCase);
             hmData.put("totalCase", totalCase);
             
             newCase = ((JSONObject) (JSONObject) jsono.get("Global")).get("NewConfirmed").toString();
-            Tools.insertNumberComma(newCase);
             hmData.put("newCase", newCase);
             
             totalDeaths = ((JSONObject) (JSONObject) jsono.get("Global")).get("TotalDeaths").toString();
-            Tools.insertNumberComma(totalDeaths);
             hmData.put("totalDeaths", totalDeaths);
             
             newDeaths = ((JSONObject) (JSONObject) jsono.get("Global")).get("NewDeaths").toString();
-            Tools.insertNumberComma(newDeaths);
             hmData.put("newDeaths", newDeaths);
             
             totalRecovered = ((JSONObject) (JSONObject) jsono.get("Global")).get("TotalRecovered").toString();
-            Tools.insertNumberComma(totalRecovered);
             hmData.put("totalRecovered", totalRecovered);
             
             newRecovered = ((JSONObject) (JSONObject) jsono.get("Global")).get("NewRecovered").toString();
-            Tools.insertNumberComma(newRecovered);
             hmData.put("newRecovered", newRecovered);
             
             lastUpdate = jsono.get("Date").toString();

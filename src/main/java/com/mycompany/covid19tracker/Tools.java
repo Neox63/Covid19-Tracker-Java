@@ -24,22 +24,6 @@ public class Tools {
 
         return number;
     }
-
-    public static String getFormattedDate (String inputDate) {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-
-        Date date = new Date();
-        try {
-            date = dateFormat.parse(inputDate);
-        } catch (ParseException e) {
-            System.out.println(e);
-        }
-
-        DateFormat outputFormat = new SimpleDateFormat("EEEE dd MMMM yyyy");
-        String dateString = outputFormat.format(date);
-
-        return dateString;
-    }
     
     public static String getFormattedTime (String inputDate) {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
