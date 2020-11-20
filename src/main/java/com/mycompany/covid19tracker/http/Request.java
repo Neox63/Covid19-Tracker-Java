@@ -19,7 +19,7 @@ import javafx.concurrent.Task;
 
 public class Request extends Task<String> {
 
-    private static final String URLBASE = "https://api.covid19api.com/summary";
+    private static final String URLBASE = "https://api.covid19api.com/";
     private final String action;
     private final static String CHARSET = "UTF-8";
 

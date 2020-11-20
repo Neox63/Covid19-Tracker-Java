@@ -14,6 +14,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         Switcher.setStage(stage);
         Switcher.switchPage("Main", "Covid-19 Tracker");
+        stage.setResizable(false);
         stage.show();
     }
   

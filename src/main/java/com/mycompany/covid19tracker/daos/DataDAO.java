@@ -22,7 +22,7 @@ import org.json.simple.parser.ParseException;
  */
 public class DataDAO {
     public static void getData(EventHandler<WorkerStateEvent> f) {
-        String query = "";
+        String query = "summary";
         
         try {
             Request gt = new Request(query);

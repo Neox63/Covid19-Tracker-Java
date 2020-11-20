@@ -16,7 +16,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1f3ff" height="120.0" layoutX="35.0" layoutY="90.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="295.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb5b6" height="120.0" layoutX="350.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="295.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7ffe8" height="120.0" layoutX="193.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="295.0" />
-      <Button layoutX="263.0" layoutY="395.0" mnemonicParsing="false" onAction="#clickRefresh" prefHeight="45.0" prefWidth="155.0" text="Rafraichir les données" />
+      <Button layoutX="263.0" layoutY="397.0" mnemonicParsing="false" onAction="#clickRefresh" prefHeight="45.0" prefWidth="155.0" text="Rafraichir les données" />
       <Label fx:id="labelLastRefresh" layoutX="81.0" layoutY="62.0" prefHeight="17.0" prefWidth="521.0" textFill="#e1e1e1" />
       <Label layoutX="123.0" layoutY="97.0" text="Nombre de cas">
          <font>

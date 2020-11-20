@@ -9,8 +9,6 @@ package com.mycompany.covid19tracker.controllers;
 import com.mycompany.covid19tracker.Tools;
 import com.mycompany.covid19tracker.daos.DataDAO;
 import java.net.URL;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 import javafx.concurrent.WorkerStateEvent;
@@ -19,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 
 /**
  * FXML Controller class
@@ -41,8 +40,6 @@ public class MainController implements Initializable {
     private Label labelTotalCase;
     @FXML
     private Label labelTotalRecovered;
-    
-    private String totalCase;
 
     /**
      * Initializes the controller class.
@@ -65,13 +62,13 @@ public class MainController implements Initializable {
     public void awaitAPI(WorkerStateEvent t){
         String apiResponse = (String) t.getSource().getValue();     
         HashMap<String, String> retrievedData = DataDAO.fromJSONString(apiResponse);
-        
+  
         labelTotalCase.setText(Tools.insertNumberComma(retrievedData.get("totalCase")));
         labelNewCases.setText("+" + Tools.insertNumberComma(retrievedData.get("newCase")) + " en 24h");
         labelTotalDeaths.setText(Tools.insertNumberComma(retrievedData.get("totalDeaths")));
         labelNewDeaths.setText("+" + Tools.insertNumberComma(retrievedData.get("newDeaths")) + " en 24h");
         labelTotalRecovered.setText(Tools.insertNumberComma(retrievedData.get("totalRecovered")));
-        labelNewRecovered.setText("+" + Tools.insertNumberComma(retrievedData.get("totalCase")) + " en 24h");
+        labelNewRecovered.setText("+" + Tools.insertNumberComma(retrievedData.get("newRecovered")) + " en 24h");
         labelLastRefresh.setText("Dernière actualisation de l'API : " + Tools.getFormattedTime(retrievedData.get("lastUpdate")));
     }
     
