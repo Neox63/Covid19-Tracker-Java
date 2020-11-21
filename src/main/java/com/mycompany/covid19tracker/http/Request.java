@@ -31,7 +31,7 @@ public class Request extends Task<String> {
     protected String call() throws Exception {  
         HttpRequest request = HttpRequest.newBuilder()
         .uri(new URI(URLBASE + URLEncoder.encode(action, CHARSET)))
-        .timeout(Duration.of(10, SECONDS))
+        .timeout(Duration.ofSeconds(5))
         .GET()
         .build();
 
